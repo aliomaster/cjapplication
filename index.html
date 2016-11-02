@@ -4,6 +4,11 @@
 		<meta charset="UTF-8">
 		<title>Control Journal Application</title>
 		<link rel="stylesheet" href="./assets/css/style.css">
+
+		<link rel="import" href="./sections/control.html">
+		<link rel="import" href="./sections/statistics.html">
+		<link rel="import" href="./sections/purchase.html">
+		<link rel="import" href="./sections/plans.html">
 	</head>
 	<body>
 		<div class="window">
@@ -15,30 +20,33 @@
 			</header>
 			<div class="window-content">
 				<div class="pane-group">
-					<div class="pane pane-sm sidebar">
+					<div class="pane pane-sm sidebar js-nav">
 						<nav class="nav-group">
 							<h5 class="nav-group-title">Разделы:</h5>
-							<span class="nav-group-item plans active">
+							<span id="button-plans" data-section="plans" class="nav-group-item plans">
 								Планирование
 							</span>
-							<span class="nav-group-item control">
+							<span id="button-control" data-section="control" class="nav-group-item control">
 								Контроль
 							</span>
-							<span class="nav-group-item statistics">
-								Траты
+							<span id="button-statistics" data-section="statistics" class="nav-group-item statistics">
+								Расходы
 							</span>
-							<span class="nav-group-item purchase">
+							<span id="button-purchase" data-section="purchase" class="nav-group-item purchase">
 								Закупки
 							</span>
 						</nav>
 					</div>
 
-					<div class="pane">
-						<p>in development...</p>
-					</div>
+					<div class="pane content js-content"></div>
 				</div>
 			</div>
 		</div>
-		<script>require('./assets/js/menu.js')</script>
+		<script>
+			require('./assets/js/menu.js');
+			require('./assets/js/imports');
+			require('./assets/js/ex-links');
+			require('./assets/js/nav');
+		</script>
 	</body>
 </html>
