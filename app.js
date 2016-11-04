@@ -1,14 +1,6 @@
 const electron = require('electron');
 const {app, BrowserWindow} = electron;
-//const ejs = require('ejs');
-var sectionItems = require(`${__dirname}/assets/js/sections.json`);
-//var ejse = require('ejs-electron');
-
-//var sectionItems = JSON.parse(`${__dirname}/assets/js/sections.json`);
-
-//console.dir(sectionItems);
-
-//var ejs = new electronEjs({ sections: sectionItems });
+const mongoose = require('./libs/mongoose');
 
 var win = null;
 
@@ -18,21 +10,20 @@ app.on('window-all-closed', () => {
 	}
 });
 
-
-
 app.on('ready', () => {
 	const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
 	let winOpts = {
 		width: width * .5,
 		height: height * .5,
-		acceptFirstMouse: true,
+		//acceptFirstMouse: true,
 		titleBarStyle: 'hidden',
+		frame: false,
 		//'resizable': false,
 		//'kiosk': true,
 	};
 	if (process.platform === 'linux') {
-      winOpts.icon = (`${__dirname}/assets/app-icon/png/128.png`);
-    }
+	  winOpts.icon = (`${__dirname}/assets/app-icon/png/128.png`);
+	}
 	win = new BrowserWindow(winOpts);
 	win.loadURL(`file://${__dirname}/index.html`);
 	win.setMenu(null);

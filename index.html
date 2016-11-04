@@ -12,11 +12,20 @@
 	</head>
 	<body>
 		<div class="window">
-			<header class="toolbar toolbar-header">
+			<header class="toolbar toolbar-header draggable">
 				<div class="header-title-holder">
 					<h1 class="title">Центр планов</h1>
 				</div>
-				<div class="transparent-bg-secondary-layer"></div>
+				<div class="toolbar-actions">
+					<div class="btn-group pull-right" id="js-actions">
+						<button class="btn btn-default icon icon-down-open" id="minimize-window-button">
+						</button>
+						<button class="btn btn-default icon icon-up-open" id="maximize-window-button">
+						</button>
+						<button class="btn btn-default icon icon-cancel" id="close-window-button">
+						</button>
+					</div>
+				</div>
 			</header>
 			<div class="window-content">
 				<div class="pane-group">
@@ -30,19 +39,19 @@
 								Контроль
 							</span>
 							<span id="button-statistics" data-section="statistics" class="nav-group-item statistics">
-								Расходы
+								Траты
 							</span>
 							<span id="button-purchase" data-section="purchase" class="nav-group-item purchase">
 								Закупки
 							</span>
 						</nav>
 					</div>
-
 					<div class="pane content js-content"></div>
 				</div>
 			</div>
 		</div>
 		<script>
+			require('./assets/js/main.js');
 			require('./assets/js/menu.js');
 			require('./assets/js/imports');
 			require('./assets/js/ex-links');

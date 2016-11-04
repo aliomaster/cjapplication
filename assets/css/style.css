@@ -121,6 +121,7 @@ textarea {
 	-webkit-user-select: text;
 }
 
+.pane.content,
 form,
 input,
 optgroup,
@@ -367,6 +368,7 @@ h6 {
 	background-image: -webkit-linear-gradient(top, #fcfcfc 0%, #f1f1f1 100%);
 	background-image: linear-gradient(to bottom, #fcfcfc 0%, #f1f1f1 100%);
 }
+
 .btn-default:active {
 	background-color: #ddd;
 	background-image: none;
@@ -512,16 +514,17 @@ h6 {
 }
 
 .toolbar {
-	min-height: 100px;
+	min-height: 22px;
 	box-shadow: inset 0 1px 0 #f5f4f5;
-	background: url('../img/plans1.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+	background-color: #e8e6e8;
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#e8e6e8),color-stop(100%,#d1cfd1));
+	background-image: -webkit-linear-gradient(top,#e8e6e8 0,#d1cfd1 100%);
+	background-image: linear-gradient(to bottom,#e8e6e8 0,#d1cfd1 100%);
 }
 
 .toolbar-header {
-	padding: 40px 0 20px;
+	border-bottom: 1px solid #c2c0c2;
+	padding: 10px 0;
 	position: relative;
 	color: rgba(255, 255, 255, 0.8);
 }
@@ -553,6 +556,7 @@ h6 {
 	font-size: 24px;
 	font-weight: bold;
 	cursor: default;
+	color: #555;
 }
 
 .toolbar-borderless {
@@ -670,6 +674,7 @@ textarea {
 	flex: 1;
 	border-left: 1px solid #ddd;
 }
+
 .pane:first-child {
 	border-left: 0;
 }
@@ -680,7 +685,7 @@ textarea {
 }
 
 .pane-mini {
-	width: 80px;
+	width: 135px;
 	flex: none;
 }
 
@@ -2379,6 +2384,7 @@ td:last-child {
 	bottom: 0;
 	overflow-x: hidden;
 	overflow-y: auto;
+	padding: 20px;
 	color: var(--color-accent);
 	pointer-events: none;
 	visibility: hidden;
@@ -2394,3 +2400,44 @@ td:last-child {
 	transform: translateX(0);
 	transition: visibility 0s 0s linear , opacity .36s ease-out, transform .36s ease-out;
 }
+
+/* .navbox {
+	position: relative;
+	float: right;
+	box-sizing: content-box;
+}
+
+ul.nav {
+	list-style: none;
+	display: block;
+	position: relative;
+	width: 130px;
+	padding: 0;
+	box-sizing: content-box;
+}
+
+ul.nav li {
+	margin: 5px 0 0 0;
+	box-sizing: content-box;
+}
+
+ul.nav li span {
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+	color: #174867;
+	padding: 7px 20px 7px 15px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	width: 85px;
+	margin-left: 10px;
+	display: block;
+	text-decoration: none;
+	box-shadow: -2px 2px 4px #888;
+	box-sizing: content-box;
+}
+
+ul.nav li span:hover {
+	color: #67a5cd;
+	padding: 7px 30px 7px 15px;
+	margin-left: 0;
+} */
