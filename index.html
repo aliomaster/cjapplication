@@ -4,11 +4,13 @@
 		<meta charset="UTF-8">
 		<title>Control Journal Application</title>
 		<link rel="stylesheet" href="./assets/css/style.css">
+		<!-- <link rel="stylesheet" href="./vendor/jquery-ui/themes/smoothness/jquery-ui.min.css"> -->
 
 		<link rel="import" href="./sections/control.html">
 		<link rel="import" href="./sections/statistics.html">
 		<link rel="import" href="./sections/purchase.html">
 		<link rel="import" href="./sections/plans.html">
+
 	</head>
 	<body>
 		<div class="window">
@@ -25,6 +27,10 @@
 						<button class="btn btn-default icon icon-cancel" id="close-window-button">
 						</button>
 					</div>
+					<label class="switch pull-right">
+						<input type="checkbox">
+						<div class="slider round"></div>
+					</label>
 				</div>
 			</header>
 			<div class="window-content">
@@ -50,6 +56,9 @@
 				</div>
 			</div>
 		</div>
+		<!-- <script src="./vendor/jquery/dist/jquery.min.js"></script>
+		<script src="./vendor/jquery-ui/jquery-ui.min.js"></script>
+		<script>window.jQuery = window.$ = module.exports;</script> -->
 		<script>
 			require('./assets/js/main.js');
 			require('./assets/js/menu.js');
