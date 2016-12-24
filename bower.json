@@ -1,12 +1,12 @@
 {
-  "name": "cjapplication",
+  "name": "sc-application",
   "description": "control journal for home and life control application",
   "main": "app.js",
   "authors": [
     "aliowebdeveloper"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/aliomaster/cjapplication",
+  "homepage": "https://github.com/aliomaster/sc-application",
   "ignore": [
     "**/.*",
     "node_modules",

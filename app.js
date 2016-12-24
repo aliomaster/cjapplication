@@ -15,8 +15,8 @@ app.on('ready', () => {
 	const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
 	let winOpts = {
 		height: height * .5,
-		titleBarStyle: 'hidden',
-		frame: false,
+		//titleBarStyle: 'hidden',
+		//frame: false,
 		//'resizable': false,
 		//'kiosk': true,
 	};
